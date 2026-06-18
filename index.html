@@ -10,16 +10,23 @@
         <header>
             <h1> KandaKost </h1>
 
-            <nav>
+            <nav>   
                 <a href="">Beranda</a>
                 <a href="">Fasilitas</a>
-                <a href="">Daftar Harga</a>
+                <a href="">Daftar Harga</a> 
                 <a href="">Booking</a>
             </nav>
 
+            <!-- darkmode switch -->
+            <button id="tombol-tema"> Tema Gelap </button>
         </header>
 
         <main class="container">
+            <!-- teks sapaan -->
+            <section>
+                <p id="sapaan-waktu"> Halo selamat datang diKandaKost </p>
+            </section>
+            
             <!-- beranda -->
             <section >
                 <img src="https://cdn-cms.pgimgs.com/static/2021/02/3.2-Desain-Kamar-Kost-3x3.png" alt="Ilustrasi Kamar Kost">
@@ -53,21 +60,16 @@
                 <h1>Daftar Harga</h1>
                 
                 <table border="1">
-                    <tr>
-                        <th>tipe kamar</th>
-                        <th>fasilitas tambahan</th>
-                        <th>harga per bulan</th>
-                    </tr>
-                    <tr>
-                        <td>tipe reguler</td>
-                        <td>kipas angin</td>
-                        <td>Rp800.000</td>
-                    </tr>
-                    <tr>
-                        <td>tipe premium</td>
-                        <td>ac, kipas angin</td>
-                        <td>Rp1.200.000</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>tipe kamar</th>
+                            <th>fasilitas tambahan</th>
+                            <th>harga per bulan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftar-kost"> 
+                         <!-- data ditable body akan kita generate dari javascript -->
+                    </tbody>
                 </table>
             </section>
 
@@ -75,7 +77,7 @@
             <section>
                 <h1>Booking Kamar</h1>
 
-                <form action="#" method="post">
+                <form id="form-booking" action="#" method="post">
                     <div>
                         <label for="nama">nama lengkap : </label>
                         <input type="text"  id="nama" placeholder="masukkan nama" > 
@@ -93,6 +95,9 @@
                         <button> Kirim permintaan booking </button>
                     </div>
                 </form>
+                  <!-- pesan "booking berhasil"  -->
+                <div id="pesan-sukses" style="display:none; background-color: #d1e7dd; color: #0f5132; padding: 20px; border-radius: 10px; text-align: center; margin-top: 15px;">
+                </div>
             </section>
         </main>
 
@@ -100,5 +105,7 @@
             <p> &copy; 2026 Coder Institute Universitas Hasanuddin. Divisi WEBSITE GACOR    . </p>
         </footer>
         
+        <!-- menghubungkan html dengan javascript -->
+        <script src="script.js"></script>
     </body>
 </html>
